@@ -16,9 +16,38 @@ const popularCityElements = document.querySelector('.list-group-2');
 // main
 const weatherContent = document.querySelector('#weatherContent');
 const forcastIcon = document.querySelector('#forecastIcon');
+
+const temp = document.querySelector('#Temp');
+const humidity = document.querySelector('#Humidity');
+const windSpeeds = document.querySelector('#windSpeeds');
 const uvIndex = document.querySelector('#uvIndex');
+
 const cardElement = document.querySelector('.card');
 const cardTitle = document.querySelector('.card-title');
+
+let searchHistory = [];
+
+const renderHistory = function(){
+    let searchList = document.querySelector(".list-group-1")
+        searchList.innerHTML = ""
+            for (i = 0; i < 6; i++){
+                const item = searchHistory[i];
+
+                const searchItem = document.createElement("li");
+                    searchItem.textContent = item;
+                    searchItem.setAttribute("submit", i);
+                    searchList.appendChild(searchItem);
+    }
+}
+
+const runApp = function(){
+    let storedSearch = JSON.parse(localStorage.getItem("searchHistory"));
+
+    if (storedSearch !== null){
+        searchHistory = storedSearch;
+    }
+    renderHistory();
+}
 
 const storeSearch = function () {
     localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
@@ -27,10 +56,10 @@ const storeSearch = function () {
 const formSubmitHandler = function (e) {
     e.preventDefault();
 
-    const cityName = cityInputElem.value.trim();
+    const cityName = cityInput.value.trim();
     if (cityName) {
         searchHistory.push(cityName);
-        cityInputElem.value = "";
+        cityInput.value = "";
 
         storeSearch();
         renderHistory();
@@ -75,17 +104,19 @@ const displayWeather = function(weatherData) {
     dateEl.innerText = date;
     document.getElementById("dailyDate").prepend(dateEl)
 
-    document.querySelector(".dailyTemp").innerText = weatherData.current.temp;
-    document.querySelector(".dailyWind").innerText = weatherData.current.wind_speed;
-    document.querySelector(".dailyHumid").innerText = weatherData.current.humidity;
-    document.querySelector(".dailyIndex").innerText = weatherData.current.uvi;
+    document.querySelector("#Temp").innerText = weatherData.current.temp;
+    document.querySelector("#windSpeeds").innerText = weatherData.current.wind_speed;
+    document.querySelector("#Humidity").innerText = weatherData.current.humidity;
+    document.querySelector("#uvIndex").innerText = weatherData.current.uvi;
         for(i = 1; i < 6; i++){
             let card = document.querySelector(".card" + (i))
             let iconUrl = "https://openweathermap.org/img/wn" + weatherData.current.weather[0].icon + "png";
+
+
     let icon = document.createElement("img")
     icon.setAttribute("src", iconUrl)
-    document.getElementById("dailyDate").append(icon)
-
+    card.appendChild(icon)
+    
     let temp = document.createElement("p")
     temp.innerText = weatherData.daily[i].temp.day;
     card.appendChild(temp);
@@ -99,6 +130,8 @@ const displayWeather = function(weatherData) {
     card.appendChild(humid);
     }
 };
+
+runApp();
 
 
 
