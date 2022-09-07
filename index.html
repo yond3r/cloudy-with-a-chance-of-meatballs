@@ -26,11 +26,11 @@
   </header>
 
   <!-- the Main  -->
-  <div class="container">
+  <main class="container-fluid">
     <div class="row">
 
       <!-- sidebar -->
-      <sidebar class="sidebar col-sm-3 col-md-4 pt-5">
+      <div class="col-12 col-md-3 0-2 search-column">
         <label class="text-muted" for="cityInput" id="cityInputLabel"> &#x263C;Search for a City Here! &#x263C;</label>
         <form id="citySearchForm">
           <div class="form-group">
@@ -57,11 +57,11 @@
         <button type="button" class="list-group-item list-group-action" value="Bangkok">Bangkok</button>
 
         <button type="button" class="list-group-item list-group-action" value="Hong Kong">Hong Kong</button>
-      </sidebar>
+      </div>
 
       <!-- weather data -->
       <content id="content-body" class="col-sm-5 col-md-10">
-        <div id="weathersContent" class="pt-5 hide">
+        <div id="currentForecast"></div>
           <div class="card w-120">
             <div class="card-body py-2">
               <h4 class="card-title font-weight-bold mb-0"></h4>
@@ -71,7 +71,6 @@
                 <p>Humidity: <span id="Humidity"></span></p>
                 <p>Wind Speeds: <span id="windSpeeds"></span></p>
                 <p>Current UV Index: <span id="uvIndex"></span></p>
-                
               </div>
             </div>
           </div>

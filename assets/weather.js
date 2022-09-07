@@ -14,16 +14,15 @@ const userCityElements = document.querySelector('.list-group-1');
 const popularCityElements = document.querySelector('.list-group-2');
 
 // main
-const weatherContent = document.querySelector('#weatherContent');
+const currentForecast = document.querySelector('#currentForecast');
 const forcastIcon = document.querySelector('#forecastIcon');
 
-const temp = document.querySelector('#Temp');
-const humidity = document.querySelector('#Humidity');
-const windSpeeds = document.querySelector('#windSpeeds');
+const temp = document.querySelector('#tempForecast');
+const humidity = document.querySelector('#humidForecast');
+const windSpeeds = document.querySelector('#windForecast');
 const uvIndex = document.querySelector('#uvIndex');
 
-const cardElement = document.querySelector('.card');
-const cardTitle = document.querySelector('.card-title');
+const cardElement = document.querySelector('.col-30');
 
 let searchHistory = [];
 
@@ -117,21 +116,18 @@ const displayWeather = function(weatherData) {
     icon.setAttribute("src", iconUrl)
     card.appendChild(icon)
     
-    let temp = document.createElement("p")
-    temp.innerText = weatherData.daily[i].temp.day;
-    card.appendChild(temp);
+    // let temp = document.createElement("p")
+    // temp.innerText = weatherData.daily[i].temp.day;
+    // card.appendChild(temp);
 
-    let wind = document.createElement("p")
-    wind.innerText = weatherData.daily[i].wind_speed;
-    card.appendChild(wind);
+    // let wind = document.createElement("p")
+    // wind.innerText = weatherData.daily[i].wind_speed;
+    // card.appendChild(wind);
 
-    let humid = document.createElement("p")
-    humid.innerText = weatherData.daily[i].humidity;
-    card.appendChild(humid);
-    }
-};
+    // let humid = document.createElement("p")
+    // humid.innerText = weatherData.daily[i].humidity;
+    // card.appendChild(humid);
+    // }
+}};
 
 runApp();
-
-
-

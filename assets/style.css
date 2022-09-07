@@ -7,11 +7,12 @@ body {
   background-color: #2A4747;
 }
 
-sidebar.sidebar.col-sm-3.col-md-4.pt-5 {
+div.col-12 {
   /* display: flex; */
   width: fit-content;
   float: left!important;
   background-color: #9DC5BB;
+  float: left;
 
 }
 
