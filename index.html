@@ -11,7 +11,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Coustard&family=IBM+Plex+Sans:wght@100&family=Indie+Flower&display=swap"
     rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
   <link rel="stylesheet" href="./assets/style.css" />
   <title>Weather</title>
 </head>
@@ -65,10 +66,12 @@
             <div class="card-body py-2">
               <h4 class="card-title font-weight-bold mb-0"></h4>
               <div class="card-text mt-0">
+                <h3 id="date" class="card-subtitle d-flex justify-content-between"></h3>
                 <p>Temp: <span id="Temp"></span></p>
                 <p>Humidity: <span id="Humidity"></span></p>
                 <p>Wind Speeds: <span id="windSpeeds"></span></p>
                 <p>Current UV Index: <span id="uvIndex"></span></p>
+                
               </div>
             </div>
           </div>
@@ -144,6 +147,7 @@
   </div>
   </main>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
   <script src="./assets/weather.js"></script>
 </body>
 

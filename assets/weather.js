@@ -102,14 +102,14 @@ const displayWeather = function(weatherData) {
     let date = moment.unix(weatherData.current.dt).format("LL")
     let dateEl = document.createElement("p");
     dateEl.innerText = date;
-    document.getElementById("dailyDate").prepend(dateEl)
+    document.getElementById("date").prepend(dateEl)
 
-    document.querySelector("#Temp").innerText = weatherData.current.temp;
-    document.querySelector("#windSpeeds").innerText = weatherData.current.wind_speed;
-    document.querySelector("#Humidity").innerText = weatherData.current.humidity;
+    document.querySelector("#tempForecast").innerText = weatherData.current.temp;
+    document.querySelector("#windForecast").innerText = weatherData.current.wind_speed;
+    document.querySelector("#humidForecast").innerText = weatherData.current.humidity;
     document.querySelector("#uvIndex").innerText = weatherData.current.uvi;
         for(i = 1; i < 6; i++){
-            let card = document.querySelector(".card" + (i))
+            let card = document.querySelector(".col-30" + (i))
             let iconUrl = "https://openweathermap.org/img/wn" + weatherData.current.weather[0].icon + "png";
 
 
