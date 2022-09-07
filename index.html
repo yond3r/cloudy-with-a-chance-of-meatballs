@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Coustard&family=IBM+Plex+Sans:wght@100&family=Indie+Flower&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="./Develop/style.css" />
+  <title>Weather</title>
+</head>
+
+<body>
+  <!-- header information -->
+  <header class="jumbotron flex-md-nowrap" id="jumbotron">
+    <h2 class="display-4 mb-0">Weather Tracker</h2>
+    <p class="lead text-info" id="textInfo">A simple and effective Weather App for Monitoring the Skies Above!</p>
+    <p id="currentDay" class="lead"></p>
+  </header>
+
+  <!-- the Main  -->
+  <div class="container">
+    <div class="row">
+
+      <!-- sidebar -->
+      <sidebar class="sidebar col-sm-3 col-md-4 pt-5">
+        <label class="text-muted" for="cityInput" id="cityInputLabel"> &#x263C;Search for a City Here! &#x263C;</label>
+        <form id="citySearchForm">
+          <div class="form-group">
+            <div class="input-group mb-10">
+              <input class="text" class="form-control" id="cityInput"
+                placeholder="&#127773;Please enter a City&#127773;">
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="button" id="citySearch"><i class="fa fa-search"></i></button>
+              </div>
+            </div>
+          </div>
+        </form>
+        <p class="font-weight-bold text-muted mb-1">Your Cities</p>
+        <div class="list-group-1"></div>
+        <p class="font-weight-bold text-muted mt-3 mb-1">Wanna Get Away? Here are some popular cities, below.</p>
+        <p class="font-weight-bold text-muted mt-3 mb-1">Popular Cities</p>
+        <div class="list-group-2"></div>
+        <button type="button" class="list-group-item list-group-action" value="Paris">Paris</button>
+
+        <button type="button" class="list-group-item list-group-action" value="NYC">NYC</button>
+
+        <button type="button" class="list-group-item list-group-action" value="London">London</button>
+
+        <button type="button" class="list-group-item list-group-action" value="Bangkok">Bangkok</button>
+
+        <button type="button" class="list-group-item list-group-action" value="Hong Kong">Hong Kong</button>
+      </sidebar>
+
+      <!-- weather data -->
+      <content id="content-body" class="col-sm-5 col-md-10">
+        <div id="weathersContent" class="pt-5 hide">
+          <div class="card w-120">
+            <div class="card-body py-2">
+              <h4 class="card-title font-weight-bold mb-0"></h4>
+              <div class="card-text mt-0">
+                <p>Temp: <span id="Temp"></span></p>
+                <p>Humidity: <span id="Humidity"></span></p>
+                <p>Wind Speeds: <span id="windSpeeds"></span></p>
+                <p>Current UV Index: <span id="uvIndex"></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </content>
+
+      <!-- 5 days forecast -->
+      <section class="container-fluid" id="forecastSection">
+        <h5 class="font-weight-bold my-5">Current 5 Day Forecast</h5>
+        <div class="row text-center" id="forecastRow"></div>
+
+        <!-- 1st Day Forecast -->
+        <div class="col-30">
+          <div class="forecast-container text-white mb-5">
+            <h4 class="date-title font-weight-bold"></h4>
+            <img id="forecastIcon" alt="Icon depicting weather forecasts">
+            <p class="font-weight-bold">Temperature: <span id="tempForecast" class="font-weight-normal"></span></p>
+            <p class="font-weight-bold">Humidity: <span id="humidForecast" class="font-weight-normal"></span></p>
+            <p class="font-weight-bold">Wind Speeds: <span id="windForecast" class="font-weight-normal"></span></p>
+          </div>
+        </div>
+
+        <!-- 2nd Day Forecast -->
+        <div class="col-30">
+          <div class="forecast-container text-white mb-5">
+            <h4 class="date-title font-weight-bold"></h4>
+            <img id="forecastIcon" alt="Icon depicting weather forecasts">
+            <p class="font-weight-bold">Temperature: <span id="tempForecast" class="font-weight-normal"></span></p>
+            <p class="font-weight-bold">Humidity: <span id="humidForecast" class="font-weight-normal"></span></p>
+            <p class="font-weight-bold">Wind Speeds: <span id="windForecast" class="font-weight-normal"></span></p>
+          </div>
+        </div>
+
+        <!-- 3rd Day Forecast -->
+        <div class="col-30">
+          <div class="forecast-container text-white mb-5">
+            <h4 class="date-title font-weight-bold"></h4>
+            <img id="forecastIcon" alt="Icon depicting weather forecasts">
+            <p class="font-weight-bold">Temperature: <span id="tempForecast" class="font-weight-normal"></span></p>
+            <p class="font-weight-bold">Humidity: <span id="humidForecast" class="font-weight-normal"></span></p>
+            <p class="font-weight-bold">Wind Speeds: <span id="windForecast" class="font-weight-normal"></span></p>
+          </div>
+        </div>
+
+        <!-- 4th Day Forecast -->
+        <div class="col-30">
+          <div class="forecast-container text-white mb-5">
+            <h4 class="date-title font-weight-bold"></h4>
+            <img id="forecastIcon" alt="Icon depicting weather forecasts">
+            <p class="font-weight-bold">Temperature: <span id="tempForecast" class="font-weight-normal"></span></p>
+            <p class="font-weight-bold">Humidity: <span id="humidForecast" class="font-weight-normal"></span></p>
+            <p class="font-weight-bold">Wind Speeds: <span id="windForecast" class="font-weight-normal"></span></p>
+          </div>
+        </div>
+
+        <!-- 5th Day Forecast -->
+        <div class="col-30">
+          <div class="forecast-container text-white mb-5">
+            <h4 class="date-title font-weight-bold"></h4>
+            <img id="forecastIcon" alt="Icon depicting weather forecasts">
+            <p class="font-weight-bold">Temperature: <span id="tempForecast" class="font-weight-normal"></span></p>
+            <p class="font-weight-bold">Humidity: <span id="humidForecast" class="font-weight-normal"></span></p>
+            <p class="font-weight-bold">Wind Speeds: <span id="windForecast" class="font-weight-normal"></span></p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  </main>
+
+  <script src="./develop/weather.js"></script>
+</body>
+
+</html>

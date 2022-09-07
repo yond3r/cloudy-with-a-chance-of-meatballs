@@ -1,0 +1,165 @@
+* {
+  font-family: 'IBM Plex Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2A4747;
+}
+
+sidebar.sidebar.col-sm-3.col-md-4.pt-5 {
+  /* display: flex; */
+  width: fit-content;
+  float: left!important;
+  background-color: #9DC5BB;
+
+}
+
+h5.font-weight-bold.my-5 {
+color: ghostwhite;
+text-align: center;
+font-weight: bold;
+}
+
+.jumbotron {
+  text-align: center;
+  background-color:#1b6165;
+  color: #DEE5E5;
+  border-radius: 0;
+  border-bottom: 10px solid #379682;
+}
+
+.hide {
+  display: none;
+}
+
+.card-header {
+  display:flex;
+}
+.card-text p {
+font-weight: 400;
+}
+
+.card-text span {
+  font-weight: normal;
+}
+
+.list-group-item {
+  position: relative!important;
+  display: block!important;
+  padding: 10px!important;
+  margin: 5%!important;
+  background-color: transparent!important;
+  border-color: #fff!important;
+  /* visibility: collapse; */
+}
+
+.list-group-item-action {
+  width: 100%!important;
+  color: rgb(55, 150, 130)!important;
+  text-align: inherit!important;
+}
+
+#uvIndex {
+  margin: 7px;
+  padding: 10px;
+  border-radius: 5px;
+  color: #f5f5f5;
+}
+
+.violet {
+  background-color: #5F28CB;
+}
+
+.red {
+  background-color: #D71818;
+}
+
+.orange {
+  background-color: #FF7F00;
+}
+
+.yellow {
+  background-color: #FFD721;
+}
+
+.green {
+background-color: #49B02D;
+}
+
+div.forecast-container.text-white.mb-5 {
+  background-color: #082D0F;
+}
+
+.col-30 {
+  width: 30%;
+  float: left;
+}
+
+
+.col-30 .forecast-container {
+  width: 90%;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.col-30 h4 {
+  font-size: 20px;
+}
+
+.col p {
+  font-size: 15px;
+}
+
+#textInfo{
+  color: #BC8DA0!important;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.Temp, .Humidity, .windSpeeds, .uvIndex {
+  font-weight: 500;
+}
+
+#citySearch {
+    color: #fff!important;
+    background-color: #7D59A5!important;
+    border-color: #7D59A5!important; 
+}
+
+/* Media!! */
+
+/* tiny screens -- 576px & below */
+@media only screen and (max-width: 576px) {
+  .col-30 {
+    width: 50%
+  }
+}
+/* small screens -- 576px & up */
+@media only screen and (min-width: 576px) {
+  .col-30 {
+    width: 33%
+  }
+}
+/* medium screens -- 768px and up */
+@media only screen and (min-width: 768px) {
+  .col-30 {
+    width: 20%
+  }
+}
+
+/* large screens -- 992px and up */
+@media only screen and (min-width: 992px) {
+  .col-30 {
+    width: 20%
+  }
+}
+
+/* extra large screens -- 1200px and up */
+@media only screen and (min-width: 1200px) {
+  .col-30 {
+    width: 20%
+  }
+}
+
