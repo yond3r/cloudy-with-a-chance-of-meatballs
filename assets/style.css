@@ -73,9 +73,10 @@ div#card1.col-2,div#card2.col-2,div#card3.col-2,div#card4.col-2,div#card5.col-2 
 section#forecastSection.container-fluid {
   display: flex;
   /* margin-right: 10%; */
-  /* background-color: #082D0F; */
+  background-color: #082D0F;
   padding: 15px;
-  margin-left: 10%;
+  /* margin-left: 10%; */
+  justify-content: center;
 }
 
 p {

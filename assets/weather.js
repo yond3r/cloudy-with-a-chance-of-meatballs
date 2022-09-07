@@ -114,7 +114,7 @@ const getWeather = function (cityName) {
     document.querySelector("#uvIndex").textContent = weatherData.current.uvi;
         for(i = 1; i < 6; i++){
             let card = document.querySelector("#card" + i)
-            let iconUrl = "https://openweathermap.org/img/wn" + weatherData.current.weather[0].icon + "png";
+            // let iconUrl = "https://openweathermap.org/img/wn/" + weatherData.current.weather[0].icon + "png";
 
 
     // let icon = document.createElement("img")
