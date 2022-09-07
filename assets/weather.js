@@ -96,38 +96,42 @@ const getWeather = function (cityName) {
                 })
             })
         }
+// Okay, so I need a get/displayWeather for the currentForecast, and a get/displayWeather for the 5 day.
 
-const displayWeather = function(weatherData) {
-    let date = moment.unix(weatherData.current.dt).format("LL")
-    let dateEl = document.createElement("p");
-    dateEl.innerText = date;
-    document.getElementById("date").prepend(dateEl)
+// const displayWeather = weatherContainerEl.textContent = "";
+// cityInputValues.textContent = searchCity;
+    
+    const displayWeather = function(weatherData) {
+        let date = moment.unix(weatherData.current.dt).format("LL")
+        let dateEl = document.createElement("p");
+        dateEl.innerText = date;
+        document.getElementById("date").prepend(dateEl)
 
-    document.querySelector("#tempForecast").innerText = weatherData.current.temp;
-    document.querySelector("#windForecast").innerText = weatherData.current.wind_speed;
-    document.querySelector("#humidForecast").innerText = weatherData.current.humidity;
-    document.querySelector("#uvIndex").innerText = weatherData.current.uvi;
+
+    document.querySelector("#Temp").textContent = weatherData.current.temp;
+    document.querySelector("#windSpeeds").textContent = weatherData.current.wind_speed;
+    document.querySelector("#Humidity").textContent = weatherData.current.humidity;
+    document.querySelector("#uvIndex").textContent = weatherData.current.uvi;
         for(i = 1; i < 6; i++){
-            let card = document.querySelector(".col-30" + (i))
+            let card = document.querySelector("#card" + i)
             let iconUrl = "https://openweathermap.org/img/wn" + weatherData.current.weather[0].icon + "png";
 
 
-    let icon = document.createElement("img")
-    icon.setAttribute("src", iconUrl)
-    card.appendChild(icon)
+    // let icon = document.createElement("img")
+    // icon.setAttribute("src", iconUrl)
+    // card.appendChild(icon)
     
-    // let temp = document.createElement("p")
-    // temp.innerText = weatherData.daily[i].temp.day;
-    // card.appendChild(temp);
+    let temp = document.createElement("p")
+    temp.innerText = weatherData.daily[i].temp.day;
+    card.appendChild(temp);
 
-    // let wind = document.createElement("p")
-    // wind.innerText = weatherData.daily[i].wind_speed;
-    // card.appendChild(wind);
+    let wind = document.createElement("p")
+    wind.innerText = weatherData.daily[i].wind_speed;
+    card.appendChild(wind);
 
-    // let humid = document.createElement("p")
-    // humid.innerText = weatherData.daily[i].humidity;
-    // card.appendChild(humid);
-    // }
-}};
+    let humid = document.createElement("p")
+    humid.innerText = weatherData.daily[i].humidity;
+    card.appendChild(humid);
+    }};
 
 runApp();

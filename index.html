@@ -31,12 +31,12 @@
 
       <!-- sidebar -->
       <div class="col-12 col-md-3 0-2 search-column">
-        <label class="text-muted" for="cityInput" id="cityInputLabel"> &#x263C;Search for a City Here! &#x263C;</label>
+        <label class="text-white" for="cityInput"> &#x263C;Search for a City Here! &#x263C;</label>
         <form id="citySearchForm">
           <div class="form-group">
             <div class="input-group mb-10">
               <input class="text" class="form-control" id="cityInput"
-                placeholder="&#127773;Please enter a City&#127773;">
+                placeholder="&#x263C;Please enter a City&#x263C;">
               <div class="input-group-append">
                 <button class="btn btn-primary" type="button" id="citySearch"><i class="fa fa-search"></i></button>
               </div>
@@ -60,17 +60,21 @@
       </div>
 
       <!-- weather data -->
-      <content id="content-body" class="col-sm-5 col-md-10">
-        <div id="currentForecast"></div>
-          <div class="card w-120">
-            <div class="card-body py-2">
+      <content id="content-body">
+        <div id="currentForecast">
+        <!-- <div class = "col-30"></div> -->
+        <div class="col-12"></div>
+          <!-- <div class="card col-12">
+            <div class="card-body py-5">
               <h4 class="card-title font-weight-bold mb-0"></h4>
-              <div class="card-text mt-0">
-                <h3 id="date" class="card-subtitle d-flex justify-content-between"></h3>
+              <div class="card-text mt-0"> -->
+                <h2 id="searchedCity"></h2> 
+                <h3 id="date" class="justify-content-between"></h3>
                 <p>Temp: <span id="Temp"></span></p>
                 <p>Humidity: <span id="Humidity"></span></p>
                 <p>Wind Speeds: <span id="windSpeeds"></span></p>
                 <p>Current UV Index: <span id="uvIndex"></span></p>
+                </div>
               </div>
             </div>
           </div>
@@ -78,67 +82,65 @@
       </content>
 
       <!-- 5 days forecast -->
+      <h5 class="font-weight-bold my-5">Current 5 Day Forecast</h5>
       <section class="container-fluid" id="forecastSection">
-        <h5 class="font-weight-bold my-5">Current 5 Day Forecast</h5>
         <div class="row text-center" id="forecastRow"></div>
 
         <!-- 1st Day Forecast -->
-        <div class="col-30">
+        <div class="col-2" id="card1" >
           <div class="forecast-container text-white mb-5">
             <h4 class="date-title font-weight-bold"></h4>
-            <img id="forecastIcon" alt="Icon depicting weather forecasts">
-            <p class="font-weight-bold">Temperature: <span id="tempForecast" class="font-weight-normal"></span></p>
+            <img class="forecastIcon" alt="Icon depicting weather forecasts">
+            <p class="font-weight-bold"><span class="tempForecast" class="font-weight-normal"></span></p>
             <p id = "Temp"></p>
-            <p class="font-weight-bold">Humidity: <span id="humidForecast" class="font-weight-normal"></span></p>
-            <p class="font-weight-bold">Wind Speeds: <span id="windForecast" class="font-weight-normal"></span></p>
+            <p class="font-weight-bold"><span class="humidForecast" class="font-weight-normal"></span></p>
+            <p class="font-weight-bold"><span class="windForecast" class="font-weight-normal"></span></p>
           </div>
         </div>
 
         <!-- 2nd Day Forecast -->
-        <div class="col-30">
+        <div class="col-2" id="card2">
           <div class="forecast-container text-white mb-5">
             <h4 class="date-title font-weight-bold"></h4>
-            <img id="forecastIcon" alt="Icon depicting weather forecasts">
-            <p class="font-weight-bold">Temperature: <span id="tempForecast" class="font-weight-normal"></span></p>
+            <img class="forecastIcon" alt="Icon depicting weather forecasts">
+            <p class="font-weight-bold"><span class="tempForecast" class="font-weight-normal"></span></p>
             <p id = "Temp"></p>
-            <p class="font-weight-bold">Humidity: <span id="humidForecast" class="font-weight-normal"></span></p>
-            <p class="font-weight-bold">Wind Speeds: <span id="windForecast" class="font-weight-normal"></span></p>
+            <p class="font-weight-bold"><span class="humidForecast" class="font-weight-normal"></span></p>
+            <p class="font-weight-bold"><span class="windForecast" class="font-weight-normal"></span></p>
           </div>
         </div>
 
         <!-- 3rd Day Forecast -->
-        <div class="col-30">
+        <div class="col-2" id="card3">
           <div class="forecast-container text-white mb-5">
             <h4 class="date-title font-weight-bold"></h4>
-            <img id="forecastIcon" alt="Icon depicting weather forecasts">
-            <p class="font-weight-bold">Temperature: <span id="tempForecast" class="font-weight-normal"></span></p>
+            <img class="forecastIcon" alt="Icon depicting weather forecasts">
+            <p class="font-weight-bold"><span class="tempForecast" class="font-weight-normal"></span></p>
             <p id = "Temp"></p>
-            <p class="font-weight-bold">Humidity: <span id="humidForecast" class="font-weight-normal"></span></p>
-            <p class="font-weight-bold">Wind Speeds: <span id="windForecast" class="font-weight-normal"></span></p>
+            <p class="font-weight-bold"><span class="humidForecast" class="font-weight-normal"></span></p>
+            <p class="font-weight-bold"><span class="windForecast" class="font-weight-normal"></span></p>
           </div>
         </div>
 
         <!-- 4th Day Forecast -->
-        <div class="col-30">
+        <div class="col-2" id="card4">
           <div class="forecast-container text-white mb-5">
             <h4 class="date-title font-weight-bold"></h4>
-            <img id="forecastIcon" alt="Icon depicting weather forecasts">
-            <p class="font-weight-bold">Temperature: <span id="tempForecast" class="font-weight-normal"></span></p>
-            <p id = "Temp"></p>
-            <p class="font-weight-bold">Humidity: <span id="humidForecast" class="font-weight-normal"></span></p>
-            <p class="font-weight-bold">Wind Speeds: <span id="windForecast" class="font-weight-normal"></span></p>
+            <img class="forecastIcon" alt="Icon depicting weather forecasts">
+            <p class="font-weight-bold"><span class="tempForecast" class="font-weight-normal"></span></p>
+            <p class="font-weight-bold"><span class="humidForecast" class="font-weight-normal"></span></p>
+            <p class="font-weight-bold"><span class="windForecast" class="font-weight-normal"></span></p>
           </div>
         </div>
 
         <!-- 5th Day Forecast -->
-        <div class="col-30">
+        <div class="col-2" id="card5">
           <div class="forecast-container text-white mb-5">
             <h4 class="date-title font-weight-bold"></h4>
-            <img id="forecastIcon" alt="Icon depicting weather forecasts">
-            <p class="font-weight-bold">Temperature: <span id="tempForecast" class="font-weight-normal"></span></p>
-            <p id = "Temp"></p>
-            <p class="font-weight-bold">Humidity: <span id="humidForecast" class="font-weight-normal"></span></p>
-            <p class="font-weight-bold">Wind Speeds: <span id="windForecast" class="font-weight-normal"></span></p>
+            <img class="forecastIcon" alt="Icon depicting weather forecasts">
+            <p class="font-weight-bold"><span class="tempForecast" class="font-weight-normal"></span></p>
+            <p class="font-weight-bold"><span class="humidForecast" class="font-weight-normal"></span></p>
+            <p class="font-weight-bold"><span class="windForecast" class="font-weight-normal"></span></p>
           </div>
         </div>
       </section>

@@ -16,6 +16,39 @@ div.col-12 {
 
 }
 
+content-body {
+  width: 100%;
+  background-color: ghostwhite;
+}
+
+#currentForcast {
+  background-color: ghostwhite;
+}
+
+content#content-body {
+  color: ghostwhite;
+  position: relative;
+  /* width: 100%; */
+  padding-left: 15px;
+  padding-right: 15px;  
+  margin: 100px;
+  font-size: 35px;
+}
+
+div.card-body.py-2 {
+  width: 50%;
+}
+
+div.card.w-12{
+  width: 50%;
+}
+
+.card {
+  justify-content: center;
+  margin: 50px;
+  width: fit-content;
+}
+
 h5.font-weight-bold.my-5 {
 color: ghostwhite;
 text-align: center;
@@ -33,6 +66,22 @@ font-weight: bold;
 .hide {
   display: none;
 }
+div#card1.col-2,div#card2.col-2,div#card3.col-2,div#card4.col-2,div#card5.col-2 {
+/* padding: 5px; */
+}
+
+section#forecastSection.container-fluid {
+  display: flex;
+  /* margin-right: 10%; */
+  /* background-color: #082D0F; */
+  padding: 15px;
+  margin-left: 10%;
+}
+
+p {
+  /* font-size: 12px; */
+  color: #f5f5f5;
+}
 
 .card-header {
   display:flex;
@@ -44,6 +93,11 @@ font-weight: 400;
 .card-text span {
   font-weight: normal;
 }
+div.list-group-1{
+  list-style: none!important;
+  font-size: 20px;
+  font-weight: bolder;
+}
 
 .list-group-item {
   position: relative!important;
@@ -53,6 +107,7 @@ font-weight: 400;
   background-color: transparent!important;
   border-color: #fff!important;
   /* visibility: collapse; */
+  list-style: none!important;
 }
 
 .list-group-item-action {
