@@ -72,8 +72,8 @@ searchBtn.addEventListener('click', formSubmitHandler);
 
 //weather api &  keys + url
 const getWeather = function (cityName) {
-    const apiKey = "ec4f51ab549c402396d72795f8b68224";
-    const apiUrl = "http://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&appid=" + apiKey;
+    const apiKey = "f7e05673ec4f51ab549c402396d72795f8b68224fd7e6ad3ca1950f24dc69f53";
+    const apiUrl = "https://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&appid=" + apiKey;
 
     fetch(apiUrl)
         .then(function (res) {
